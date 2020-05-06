@@ -1,6 +1,6 @@
 package chap03.section2
 
-fun highFunc(a:Int, b: Int, sum: (a:Int, b:Int)-> Int):Int {
+fun highFunc(a:Int, b: Int, sum: (Int, Int)-> Int):Int {
     return sum(a,b)
 }
 
@@ -10,7 +10,9 @@ fun more(out: (String) -> String) {
 
 fun main() {
     val multi = { x:Int, y:Int -> x * y }
+    val test = multi(10,2)
     val result = highFunc( 10, 20) {x,y -> x + y}
-    more { "$it fsdfsdfdaf" }
+    more { "$it fsfsd" }
+    println(test)
     println(result)
 }
